@@ -1,0 +1,62 @@
+* {
+    -fx-background-radius: 0;
+}
+
+.root {
+    -fx-background-image: url("../image/gentle.jpg");
+    -fx-background-color:  linear-gradient(lightgray, gray);
+    -fx-border-color: white;
+    -fx-border-radius: 20;
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+}
+
+/* Title on form */
+.app-name {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+/* Title on form */
+.main-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Normal label */
+.title {
+    -fx-font-size: 14px;
+}
+
+/* Title on form */
+.sub-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.content-text {
+    -fx-font-size: 15px;
+}
+
+.button.customized-button{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 7px 15px;
+    -fx-background-color: #303030;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #383838;
+    -fx-text-fill: white;
+}
+
+.input-text {
+    -fx-font-size: 14px;
+}
+
+.align-center {
+    -fx-alignment: center;
+}
+
+

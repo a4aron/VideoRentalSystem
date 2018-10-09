@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" prefHeight="487.0" prefWidth="813.0" stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.dashboard.DashboardController">
+    <top>
+        <HBox fx:id="top_layout" alignment="CENTER_LEFT" prefHeight="50.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="btn_customer" onAction="#onCustomerMenuClick" onMouseEntered="#onCustomerMouseEntered" onMouseExited="#onCustomerMouseExited" prefHeight="48.0" prefWidth="250.0" styleClass="customized-button" text="CUSTOMER" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <font>
+                        <Font size="22.0" />
+                    </font></Button>
+                <Button fx:id="btn_car" onAction="#onVideoMenuClick" onMouseEntered="#onVideoMouseEntered" onMouseExited="#onVideoMouseExited" prefHeight="48.0" prefWidth="250.0" styleClass="customized-button" text="VIDEOS" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <font>
+                        <Font size="22.0" />
+                    </font></Button>
+                <Button fx:id="btn_rental" onMouseEntered="#onRetalMouseEntered" onMouseExited="#onRetalMouseExited" prefHeight="48.0" prefWidth="250.0" styleClass="customized-button" text="RENTAL" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <font>
+                        <Font size="22.0" />
+                    </font></Button>
+                <Button fx:id="btn_return" layoutX="510.0" layoutY="11.0" onAction="#onReturnClick" onMouseEntered="#onReturnMouseEntered" onMouseExited="#onReturnMouseExited" prefHeight="48.0" prefWidth="250.0" styleClass="customized-button" text="RETURN" textFill="WHITE">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn_staff" onMouseEntered="#onStaffMouseEntered" onMouseExited="#onStaffMouseExited" prefHeight="48.0" prefWidth="250.0" styleClass="customized-button" text="STAFF" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <font>
+                        <Font size="22.0" />
+                    </font></Button>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <HBox alignment="CENTER" prefHeight="400.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="TOP_CENTER" prefWidth="240.0">
+                    <children>
+                        <TextField fx:id="search_customer" onKeyPressed="#onSearchCustomer" onKeyReleased="#onSearchCustomer" prefHeight="25.0" prefWidth="113.0" promptText="Search Customer">
+                            <VBox.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <ListView fx:id="customer_list" onMouseClicked="#onCustomerItemClick" prefHeight="460.0" prefWidth="200.0" />
+                    </children>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </VBox>
+                <Separator orientation="VERTICAL" prefHeight="200.0">
+                    <HBox.margin>
+                        <Insets left="3.0" />
+                    </HBox.margin>
+                </Separator>
+                <VBox alignment="TOP_CENTER" prefWidth="240.0">
+                    <children>
+                        <TextField fx:id="search_video" onKeyPressed="#onSearchVideo" onKeyReleased="#onSearchVideo" promptText="Search Movie">
+                            <VBox.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <ListView fx:id="video_list" onMouseClicked="#onVideoItemClick" prefHeight="460.0" prefWidth="200.0" />
+                    </children>
+                </VBox>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </HBox>
+    </left>
+    <bottom>
+        <HBox fx:id="bottom_layout" prefHeight="5.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+    </bottom>
+    <center>
+        <AnchorPane prefWidth="500.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="266.0" layoutY="306.0" prefHeight="17.0" prefWidth="90.0" styleClass="sub-title" text="Expected Date" />
+                <Label layoutX="18.0" layoutY="306.0" styleClass="sub-title" text="Rent Date" />
+                <Button layoutX="359.0" layoutY="377.0" mnemonicParsing="false" onAction="#on_Save" prefHeight="20.0" prefWidth="110.0" styleClass="customized-button" text="RENT">
+                </Button>
+                <Label layoutX="9.0" layoutY="114.0" styleClass="main-title" text="Video Information" />
+
+                <Label layoutX="187.0" layoutY="182.0" styleClass="sub-title" text="Rating" />
+                <Label layoutX="20.0" layoutY="143.0" styleClass="sub-title" text="Name" />
+                <Label layoutX="187.0" layoutY="229.0" styleClass="sub-title" text="Rental Fee" />
+                <Label layoutX="326.0" layoutY="182.0" styleClass="sub-title" text="Genre" />
+                <Label fx:id="lbl_status" layoutX="19.0" layoutY="193.0" prefHeight="27.0" prefWidth="136.0" styleClass="content-text" text="-">
+                </Label>
+                <Label layoutX="19.0" layoutY="181.0" styleClass="sub-title" text="Status" />
+                <Label fx:id="lbl_genre" layoutX="326.0" layoutY="194.0" prefHeight="27.0" prefWidth="130.0" styleClass="content-text" text="-">
+                </Label>
+                <Label fx:id="lbl_rating" layoutX="187.0" layoutY="194.0" prefHeight="27.0" prefWidth="83.0" styleClass="content-text" text="-">
+                </Label>
+                <Label fx:id="lbl_movie" layoutX="20.0" layoutY="155.0" prefHeight="27.0" prefWidth="424.0" styleClass="content-text" text="-">
+                </Label>
+                <Label fx:id="lbl_rental" layoutX="187.0" layoutY="241.0" prefHeight="27.0" prefWidth="80.0" styleClass="content-text" text="-">
+                </Label>
+                <Label layoutX="326.0" layoutY="229.0" styleClass="sub-title" text="Price" />
+                <Label fx:id="lbl_price" layoutX="326.0" layoutY="241.0" prefHeight="27.0" prefWidth="142.0" styleClass="content-text" text="-">
+                </Label>
+
+
+                <Label layoutX="327.0" layoutY="37.0" styleClass="sub-title" text="Phone" />
+                <Label layoutX="17.0" layoutY="37.0" styleClass="sub-title" text="First Name" />
+                <Label layoutX="18.0" layoutY="73.0" styleClass="sub-title" text="Address" />
+                <Label fx:id="lbl_lastname" layoutX="188.0" layoutY="49.0" prefHeight="27.0" prefWidth="125.0" styleClass="content-text" text="-">
+                </Label>
+                <Label layoutX="188.0" layoutY="37.0" styleClass="sub-title" text="Last Name" />
+                <Label fx:id="lbl_address" layoutX="19.0" layoutY="84.0" prefHeight="27.0" prefWidth="479.0" styleClass="content-text" text="-">
+                </Label>
+                <Label fx:id="lbl_phone" layoutX="327.0" layoutY="49.0" prefHeight="27.0" prefWidth="173.0" styleClass="content-text" text="-">
+                </Label>
+                <Label fx:id="lbl_firstname" layoutX="20.0" layoutY="49.0" prefHeight="27.0" prefWidth="146.0" styleClass="content-text" text="-">
+                </Label>
+                <Label layoutX="10.0" layoutY="3.0" styleClass="main-title" text="Customer Information">
+                    <font>
+                        <Font size="10.0" />
+                    </font></Label>
+                <Separator orientation="VERTICAL" prefHeight="432.0" prefWidth="0.0" />
+                <Separator layoutX="9.0" layoutY="110.0" prefHeight="3.0" prefWidth="480.0" />
+                <Separator layoutX="3.0" layoutY="267.0" prefHeight="3.0" prefWidth="480.0" />
+                <Label layoutX="8.0" layoutY="270.0" styleClass="main-title" text="Rental Record">
+                </Label>
+                <DatePicker fx:id="rent_date" layoutX="18.0" layoutY="326.0" promptText="mm/dd/yyyy" style="-fx-font-size: 14px" />
+                <DatePicker fx:id="expected_date" layoutX="266.0" layoutY="326.0" promptText="mm/dd/yyyy" style="-fx-font-size: 14px" />
+                <Label fx:id="lbl_director" layoutX="19.0" layoutY="240.0" prefHeight="27.0" prefWidth="136.0" styleClass="content-text" text="-" />
+                <Label layoutX="19.0" layoutY="228.0" styleClass="sub-title" text="Director" />
+                <BorderPane layoutX="88.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0" />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </AnchorPane>
+    </center>
+</BorderPane>

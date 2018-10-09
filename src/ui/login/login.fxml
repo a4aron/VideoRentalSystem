@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" hgap="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" stylesheets="@../css/global.css" vgap="15.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.login.LoginController">
+   <opaqueInsets>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </opaqueInsets>
+   <children>
+      <Label styleClass="app-name" text="Video Rental System" GridPane.columnSpan="2" />
+      <Label styleClass="title" text="Username" GridPane.rowIndex="2" />
+      <TextField fx:id="tfUsername" styleClass="input-text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <PasswordField fx:id="pfPassword" styleClass="input-text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label styleClass="title" text="Password" GridPane.rowIndex="3" />
+      <HBox alignment="BOTTOM_RIGHT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="signIn" mnemonicParsing="false" onAction="#login_handler" styleClass="customized-button" text="LOG IN" />
+         </children>
+      </HBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

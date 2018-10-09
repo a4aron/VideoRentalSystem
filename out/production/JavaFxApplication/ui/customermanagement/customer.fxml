@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="575.0" stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.customermanagement.CustomerController">
+   <children>
+      <ListView fx:id="customerListView" layoutX="25.0" layoutY="25.0" prefHeight="350.0" prefWidth="200.0" />
+      <Button fx:id="updateCustomer" layoutX="470.0" layoutY="341.0" mnemonicParsing="false" onAction="#updateCustomer" prefWidth="80.0" styleClass="customized-button" text="Save" />
+      <Button fx:id="deleteCustomer" layoutX="384.0" layoutY="341.0" mnemonicParsing="false" onAction="#deleteCustomer" prefWidth="80.0" styleClass="customized-button" text="Delete" />
+      <TextField fx:id="tfCustomerId" disable="true" layoutX="250.0" layoutY="42.0" prefHeight="25.0" prefWidth="300.0" />
+      <TextField fx:id="tfCustomerFName" layoutX="250.0" layoutY="89.0" prefHeight="25.0" prefWidth="300.0" />
+      <TextField fx:id="tfCustomerLName" layoutX="250.0" layoutY="136.0" prefHeight="25.0" prefWidth="300.0" />
+      <TextField fx:id="tfCustomerPhone" layoutX="250.0" layoutY="183.0" prefHeight="25.0" prefWidth="300.0" />
+      <TextField fx:id="tfCustomerAddress" layoutX="250.0" layoutY="230.0" prefHeight="25.0" prefWidth="300.0" />
+      <Button fx:id="clearCustomer" layoutX="250.0" layoutY="341.0" mnemonicParsing="false" onAction="#clearFields" prefWidth="80.0" styleClass="customized-button" text="Clear" />
+       <Label layoutX="250.0" layoutY="25.0" styleClass="sub-title" text="Id" />
+       <Label layoutX="250.0" layoutY="72.0" styleClass="sub-title" text="First Name" />
+       <Label layoutX="250.0" layoutY="119.0" styleClass="sub-title" text="Last Name" />
+       <Label layoutX="250.0" layoutY="166.0" styleClass="sub-title" text="Phone Number" />
+       <Label layoutX="250.0" layoutY="213.0" styleClass="sub-title" text="Address" />
+   </children>
+</AnchorPane>
